@@ -133,8 +133,8 @@ DATA_CONTOH = [
 # =====================================================================
 # 3. MESIN INFERENSI MAMDANI
 # =====================================================================
-INTERVAL = 0.1                                   # interval grid output
-Z = np.arange(0, 100 + INTERVAL / 2, INTERVAL)   # 0, 0.1, ..., 100 (1001 titik)
+INTERVAL = 5                                     # interval grid output (sama dengan perhitungan manual)
+Z = np.arange(0, 100 + INTERVAL / 2, INTERVAL)   # 0, 5, 10, ..., 100 (21 titik)
 MU_OUT = {n: trapesium(Z, *p) for n, p in VAR["Kelayakan"]["s"].items()}
 
 def fuzzifikasi(var, x):
